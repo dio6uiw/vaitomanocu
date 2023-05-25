@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+	<title>Sistema de venda</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <p class="comp">Olá, <b>Ana!</b></p>
+        <p class="educ">Bem-vinda, posso te ajudar?</p>
+    </header>
+    <main>
+    <h3>Cadastro de cliente</h3>
+    <form method="post" action="cadastroCliente.php">
+      <input type="text" class="preen" id="nome" name="nome" placeholder="Nome completo"><br>
+      <input type="text" class="preen" id="telefone" name="telefone" placeholder="Telefone"><br>
+      <input type="text" class="preen" id="cpf" name="cpf" placeholder="CPF"><br>
+      <input type="text" class="preen" id="endereco" name="endereco" placeholder="Endereço"><br>
+      <input type="submit" class="testebotao" value="Adicionar" id="botao" style="background-color: blueviolet;
+      width: 70%;
+      height: 85px;
+      font-family: 'Arial Narrow Bold', sans-serif;
+      font-size: 40px;
+      border: 0px;
+      color: rgb(240, 240, 240);
+      border-radius: 15px;
+      margin-top: 30px;
+      box-shadow: 0px 0px 5px rgb(160, 160, 160);">
+      <p id="mensagem-sucesso" style="display: none;">Cadastro realizado com sucesso!</p>
+    </form>
+        <div class="links">
+            <a href="registro_venda/NotasDeVenda.html"><button class="RVendas">Registrar venda</button></a>
+            <a href="registro_pagamento/NotaDePagamento.html"><button class="RPagamentos">Recibo de pagamento</button><br></a>
+            <a href="financeiro/Pagamentos.html"><button class="VPagamentos">Gerenciador de vendas</button><br></a>
+            <a href="sistmofc\pedidos\pedidos.html"><button class="RPedidos">Registrar pedido</button></a><br>
+        </div>
+        <script>
+            // Obtém o botão de cadastro
+            var botao = document.getElementById("botao");
+
+            // Adiciona um evento de clique ao botão
+            botao.addEventListener("click", function() {
+            // Mostra a mensagem de "Cadastrado com sucesso"
+            var mensagemSucesso = document.getElementById("mensagem-sucesso");
+            mensagemSucesso.style.display = "block";
+            });
+        </script>
+    </main>
+</body>
+</html>
